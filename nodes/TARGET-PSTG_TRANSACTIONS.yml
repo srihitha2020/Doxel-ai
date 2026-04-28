@@ -1,0 +1,213 @@
+fileVersion: 1
+id: 0c1330f1-9757-4e1c-a2a9-114eb7d3099f
+name: PSTG_TRANSACTIONS
+operation:
+  config:
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: TARGET
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8c9fbb93-a03d-4c63-beff-d31428463860
+          stepCounter: 0c1330f1-9757-4e1c-a2a9-114eb7d3099f
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        isSurrogateKey: true
+        name: PSTG_TRANSACTIONS_KEY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 5db3690c-9e54-4fac-9a96-2f51c44b0a8b
+          stepCounter: 0c1330f1-9757-4e1c-a2a9-114eb7d3099f
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: TXN_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 22efb488-9e58-4f2c-8566-c0787b2c725e
+                stepCounter: c5babdcf-311e-4f60-aa44-d2896eab6d14
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 485ca37b-7c9b-46a7-a4ff-3812691722c5
+          stepCounter: 0c1330f1-9757-4e1c-a2a9-114eb7d3099f
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: CUSTOMER_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 1f85a0b5-fd40-4cd4-b18c-ef8d63829ec9
+                stepCounter: c5babdcf-311e-4f60-aa44-d2896eab6d14
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 20f964dd-883e-4616-a5ff-284affbce30d
+          stepCounter: 0c1330f1-9757-4e1c-a2a9-114eb7d3099f
+        config: {}
+        dataType: FLOAT
+        description: ""
+        name: TXN_AMOUNT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 90189e27-f9a7-472a-be40-b3168c9c3122
+                stepCounter: c5babdcf-311e-4f60-aa44-d2896eab6d14
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 38e35e81-e625-4057-a17e-ec3a376f33eb
+          stepCounter: 0c1330f1-9757-4e1c-a2a9-114eb7d3099f
+        config: {}
+        dataType: DATE
+        description: ""
+        name: TXN_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 9bf2f607-2223-4447-b29f-8584fb1219aa
+                stepCounter: c5babdcf-311e-4f60-aa44-d2896eab6d14
+            transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 74e0443f-e9f0-4507-984a-632e7c90bd36
+          stepCounter: 0c1330f1-9757-4e1c-a2a9-114eb7d3099f
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        isSystemVersion: true
+        name: SYSTEM_VERSION
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 68ec45db-c285-4abb-b57c-09b46f20ae6a
+          stepCounter: 0c1330f1-9757-4e1c-a2a9-114eb7d3099f
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        isSystemCurrentFlag: true
+        name: SYSTEM_CURRENT_FLAG
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3997d90c-60de-4362-87cb-3203099ce061
+          stepCounter: 0c1330f1-9757-4e1c-a2a9-114eb7d3099f
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: ""
+        isSystemStartDate: true
+        name: SYSTEM_START_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 87477074-0113-433f-b564-bb2834abaa35
+          stepCounter: 0c1330f1-9757-4e1c-a2a9-114eb7d3099f
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: ""
+        isSystemEndDate: true
+        name: SYSTEM_END_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: CAST('2999-12-31 00:00:00' AS TIMESTAMP)
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 07f484f4-c652-4d02-b522-39534c706af2
+          stepCounter: 0c1330f1-9757-4e1c-a2a9-114eb7d3099f
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: ""
+        isSystemCreateDate: true
+        name: SYSTEM_CREATE_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: d4802169-d988-4f3e-a3b5-774bbfb7b234
+          stepCounter: 0c1330f1-9757-4e1c-a2a9-114eb7d3099f
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: ""
+        isSystemUpdateDate: true
+        name: SYSTEM_UPDATE_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          INC_TRANSACTIONS: c5babdcf-311e-4f60-aa44-d2896eab6d14
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: TARGET
+            nodeName: INC_TRANSACTIONS
+        join:
+          joinCondition: FROM {{ ref('TARGET', 'INC_TRANSACTIONS') }} "INC_TRANSACTIONS"
+        name: PSTG_TRANSACTIONS
+        noLinkRefs: []
+  name: PSTG_TRANSACTIONS
+  overrideSQL: false
+  schema: ""
+  sqlType: persistentStage
+  type: sql
+  version: 1
+type: Node

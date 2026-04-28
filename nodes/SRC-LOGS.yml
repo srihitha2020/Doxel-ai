@@ -1,0 +1,73 @@
+fileVersion: 1
+id: 94fa232b-57e4-4459-a065-63780784c08a
+name: LOGS
+operation:
+  database: ""
+  deployEnabled: true
+  description: ""
+  locationName: SRC
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1eadf740-5132-4dd7-968c-68b38d1b472a
+          stepCounter: 94fa232b-57e4-4459-a065-63780784c08a
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: LOG_ID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4d0c48a9-8fa9-44cf-8e0a-a8a9f2475cd9
+          stepCounter: 94fa232b-57e4-4459-a065-63780784c08a
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: MESSAGE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: b98d6d13-4751-414a-97bb-e10f5782b2b6
+          stepCounter: 94fa232b-57e4-4459-a065-63780784c08a
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: LOG_DATE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+  name: LOGS
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node

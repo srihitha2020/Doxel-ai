@@ -1,0 +1,11 @@
+fileVersion: 1
+id: "15"
+mappingDefinitions:
+  SRC:
+    database: SBRONZE
+    schema: BSCHEM
+  TARGET:
+    database: SSILVER
+    schema: SSCHEM
+name: New Environment
+type: Environment

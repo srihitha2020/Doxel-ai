@@ -1,0 +1,92 @@
+fileVersion: 1
+id: 4fdf52e5-83d4-450d-9574-0be11060d679
+name: TRANSACTIONS
+operation:
+  database: ""
+  deployEnabled: true
+  description: ""
+  locationName: SRC
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: e80edd7f-0e4f-4c43-9de6-ff5442a4b82b
+          stepCounter: 4fdf52e5-83d4-450d-9574-0be11060d679
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: TXN_ID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 2f878a49-0ad6-4d27-bc60-d781aa7494eb
+          stepCounter: 4fdf52e5-83d4-450d-9574-0be11060d679
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: CUSTOMER_ID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: a8ab2f0f-bf6d-4162-a7c3-64eed4640395
+          stepCounter: 4fdf52e5-83d4-450d-9574-0be11060d679
+        config: {}
+        dataType: FLOAT
+        defaultValue: ""
+        description: ""
+        name: TXN_AMOUNT
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 40dd404a-bdbc-4134-9cd4-63b9e4509d9f
+          stepCounter: 4fdf52e5-83d4-450d-9574-0be11060d679
+        config: {}
+        dataType: DATE
+        defaultValue: ""
+        description: ""
+        name: TXN_DATE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+  name: TRANSACTIONS
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node

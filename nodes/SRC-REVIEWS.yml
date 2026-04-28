@@ -1,0 +1,92 @@
+fileVersion: 1
+id: a265b49e-cbeb-408a-903e-6a2e9cd91151
+name: REVIEWS
+operation:
+  database: ""
+  deployEnabled: true
+  description: ""
+  locationName: SRC
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: a04b7d24-0abb-4b69-9f37-aa07ff47fbc7
+          stepCounter: a265b49e-cbeb-408a-903e-6a2e9cd91151
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: REVIEW_ID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 48cd88bf-d5fa-4367-8f46-5ddd3d087c93
+          stepCounter: a265b49e-cbeb-408a-903e-6a2e9cd91151
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: PRODUCT_ID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 883a5713-605f-4f03-ab65-86f4c97a4d22
+          stepCounter: a265b49e-cbeb-408a-903e-6a2e9cd91151
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: RATING
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: d3710db1-3ec2-43e6-82c3-c062d63a62e8
+          stepCounter: a265b49e-cbeb-408a-903e-6a2e9cd91151
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: COMMENT
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+  name: REVIEWS
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node

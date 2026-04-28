@@ -1,0 +1,6 @@
+excludeSelector: ""
+fileVersion: 1
+id: "1"
+includeSelector: PSTG_CUSTOMERS
+name: booolean
+type: Job

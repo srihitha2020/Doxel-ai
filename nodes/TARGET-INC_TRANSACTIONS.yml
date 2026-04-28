@@ -1,0 +1,114 @@
+fileVersion: 1
+id: c5babdcf-311e-4f60-aa44-d2896eab6d14
+name: INC_TRANSACTIONS
+operation:
+  config:
+    ddqcolumns:
+      items:
+        - {}
+    dqdup: false
+    dqhandle: false
+    dqnull: false
+    incColumn:
+      columnCounter: 9bf2f607-2223-4447-b29f-8584fb1219aa
+      stepCounter: c5babdcf-311e-4f60-aa44-d2896eab6d14
+    ndqcolumns:
+      items:
+        - {}
+    persistTableLocation: TARGET
+    persistTableName: PSTG_TRANSACTIONS
+    postSQL: ""
+    preSQL: ""
+    refTable: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: TARGET
+  materializationType: view
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 22efb488-9e58-4f2c-8566-c0787b2c725e
+          stepCounter: c5babdcf-311e-4f60-aa44-d2896eab6d14
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: TXN_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: e80edd7f-0e4f-4c43-9de6-ff5442a4b82b
+                stepCounter: 4fdf52e5-83d4-450d-9574-0be11060d679
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1f85a0b5-fd40-4cd4-b18c-ef8d63829ec9
+          stepCounter: c5babdcf-311e-4f60-aa44-d2896eab6d14
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: CUSTOMER_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 2f878a49-0ad6-4d27-bc60-d781aa7494eb
+                stepCounter: 4fdf52e5-83d4-450d-9574-0be11060d679
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 90189e27-f9a7-472a-be40-b3168c9c3122
+          stepCounter: c5babdcf-311e-4f60-aa44-d2896eab6d14
+        config: {}
+        dataType: FLOAT
+        description: ""
+        name: TXN_AMOUNT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a8ab2f0f-bf6d-4162-a7c3-64eed4640395
+                stepCounter: 4fdf52e5-83d4-450d-9574-0be11060d679
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9bf2f607-2223-4447-b29f-8584fb1219aa
+          stepCounter: c5babdcf-311e-4f60-aa44-d2896eab6d14
+        config: {}
+        dataType: DATE
+        description: ""
+        name: TXN_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 40dd404a-bdbc-4134-9cd4-63b9e4509d9f
+                stepCounter: 4fdf52e5-83d4-450d-9574-0be11060d679
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          TRANSACTIONS: 4fdf52e5-83d4-450d-9574-0be11060d679
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SRC
+            nodeName: TRANSACTIONS
+        join:
+          joinCondition: |
+            FROM {{ ref('SRC', 'TRANSACTIONS') }} "TRANSACTIONS"
+              WHERE "TRANSACTIONS"."TXN_DATE" > 
+              (SELECT COALESCE(MAX("TXN_DATE"), '1900-01-01') 
+                        FROM {{ ref_no_link('TARGET', 'PSTG_TRANSACTIONS') }} )
+        name: INC_TRANSACTIONS
+        noLinkRefs:
+          - locationName: TARGET
+            nodeName: PSTG_TRANSACTIONS
+  name: INC_TRANSACTIONS
+  overrideSQL: false
+  schema: ""
+  sqlType: sri:::230
+  type: sql
+  version: 1
+type: Node

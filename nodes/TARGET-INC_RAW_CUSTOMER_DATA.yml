@@ -1,0 +1,134 @@
+fileVersion: 1
+id: ee17baab-becd-46d6-b9ae-abdb6c2d3916
+name: INC_RAW_CUSTOMER_DATA
+operation:
+  config:
+    ddqcolumns:
+      items:
+        - {}
+    dqdup: false
+    dqhandle: false
+    dqnull: false
+    incColumn: ""
+    ndqcolumns:
+      items:
+        - {}
+    persistTableLocation: "ex: TARGET"
+    persistTableName: "ex: DIM_ORDERS"
+    postSQL: ""
+    preSQL: ""
+    refTable: false
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: TARGET
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6b3f7e92-bea2-4516-9b1e-f1329297cb33
+          stepCounter: ee17baab-becd-46d6-b9ae-abdb6c2d3916
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: CUSTOMER_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: e69cb8bf-2280-49f8-aaef-3b125643025c
+                stepCounter: 97aeb1d2-e820-4df8-9ae3-5e4b409c9741
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8fc7c431-3def-41ed-b4b2-70605152fa98
+          stepCounter: ee17baab-becd-46d6-b9ae-abdb6c2d3916
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: EMAIL
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 2e03933b-0d8c-41bd-a9e8-41c2d97644ca
+                stepCounter: 97aeb1d2-e820-4df8-9ae3-5e4b409c9741
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: bd2b49e7-e97c-4e17-ae6d-cb0776803c12
+          stepCounter: ee17baab-becd-46d6-b9ae-abdb6c2d3916
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: PHONE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 8b78162b-86ce-416f-83db-372688d69cc7
+                stepCounter: 97aeb1d2-e820-4df8-9ae3-5e4b409c9741
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: b065e522-ad77-4966-9c4b-5185184d3c6a
+          stepCounter: ee17baab-becd-46d6-b9ae-abdb6c2d3916
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: NAME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: f22083bc-2f64-46c8-b8f7-d89a2597110d
+                stepCounter: 97aeb1d2-e820-4df8-9ae3-5e4b409c9741
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: d07f3ac2-64ce-4e80-afb1-fc1d5d98cafd
+          stepCounter: ee17baab-becd-46d6-b9ae-abdb6c2d3916
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: CITY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 9fafbf66-6acf-45b5-b3eb-f41d270e9049
+                stepCounter: 97aeb1d2-e820-4df8-9ae3-5e4b409c9741
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 25376ab9-b057-4b60-ba1e-3ede26049c53
+          stepCounter: ee17baab-becd-46d6-b9ae-abdb6c2d3916
+        config: {}
+        dataType: TIMESTAMP_NTZ(9)
+        description: ""
+        name: UPDATED_AT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 9b488b4c-bcd0-46d7-b0fc-10f41565ad26
+                stepCounter: 97aeb1d2-e820-4df8-9ae3-5e4b409c9741
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          RAW_CUSTOMER_DATA: 97aeb1d2-e820-4df8-9ae3-5e4b409c9741
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SRC
+            nodeName: RAW_CUSTOMER_DATA
+        join:
+          joinCondition: FROM {{ ref('SRC', 'RAW_CUSTOMER_DATA') }} "RAW_CUSTOMER_DATA"
+        name: INC_RAW_CUSTOMER_DATA
+        noLinkRefs: []
+  name: INC_RAW_CUSTOMER_DATA
+  overrideSQL: false
+  schema: ""
+  sqlType: sri:::230
+  type: sql
+  version: 1
+type: Node
