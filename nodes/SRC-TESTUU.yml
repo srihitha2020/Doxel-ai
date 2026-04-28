@@ -1,0 +1,130 @@
+fileVersion: 1
+id: 0936b561-e542-46a0-b9d2-e5d892e6c6ad
+name: TESTUU
+operation:
+  database: ""
+  deployEnabled: true
+  description: ""
+  locationName: SRC
+  metadata:
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: ca7e24c2-6a6c-4cd9-a604-92f3cc7fa424
+          stepCounter: 0936b561-e542-46a0-b9d2-e5d892e6c6ad
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: EVENT_ID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: d5f89993-7613-4f00-a731-e54b968b2bf7
+          stepCounter: 0936b561-e542-46a0-b9d2-e5d892e6c6ad
+        config: {}
+        dataType: NUMBER(38,0)
+        defaultValue: ""
+        description: ""
+        name: USER_ID
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: f72640a7-dc40-4d3e-b1f9-9d11521dfabb
+          stepCounter: 0936b561-e542-46a0-b9d2-e5d892e6c6ad
+        config: {}
+        dataType: VARCHAR(16777216)
+        defaultValue: ""
+        description: ""
+        name: EVENT_TYPE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 3b1f82fc-0671-4a9a-a7f9-07bd458cefed
+          stepCounter: 0936b561-e542-46a0-b9d2-e5d892e6c6ad
+        config: {}
+        dataType: FLOAT
+        defaultValue: ""
+        description: ""
+        name: EVENT_VALUE
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 84a1165c-ea44-48c6-a721-c88c831a36c3
+          stepCounter: 0936b561-e542-46a0-b9d2-e5d892e6c6ad
+        config: {}
+        dataType: TIMESTAMP_NTZ(9)
+        defaultValue: ""
+        description: ""
+        name: EVENT_TIME
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 72292f56-77fb-4277-85c2-69e808fd67ea
+          stepCounter: 0936b561-e542-46a0-b9d2-e5d892e6c6ad
+        config: {}
+        dataType: TIMESTAMP_NTZ(9)
+        defaultValue: ""
+        description: ""
+        name: UPDATED_AT
+        nullable: true
+        primaryKey: false
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+        transform: ""
+        uniqueKey: false
+  name: TESTUU
+  schema: ""
+  sqlType: Source
+  type: sourceInput
+  version: 1
+type: Node

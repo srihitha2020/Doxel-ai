@@ -1,0 +1,116 @@
+fileVersion: 1
+id: 5fbad408-602d-4e6a-801d-f76b881d976f
+name: INC_PAYMENTS
+operation:
+  config:
+    ddqcolumns:
+      items:
+        - {}
+    dqdup: false
+    dqhandle: false
+    dqnull: false
+    incColumn:
+      columnCounter: a2b8cee3-0f26-48e9-9e1e-40666be40688
+      stepCounter: 5fbad408-602d-4e6a-801d-f76b881d976f
+    ndqcolumns:
+      items:
+        - {}
+    persistTableLocation: TARGET
+    persistTableName: PSTG_PAYMENTS
+    postSQL: ""
+    preSQL: ""
+    refTable: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: TARGET
+  materializationType: view
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 74f27ff2-5e7f-4190-937c-6edae6b11cc4
+          stepCounter: 5fbad408-602d-4e6a-801d-f76b881d976f
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: PAYMENT_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 0c9ed3f6-ffa5-45af-baaa-81337c32b5e0
+                stepCounter: 7d827168-2dd2-47f1-929f-5a2c9e349bff
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f855be10-829f-40aa-9341-c412679e3dd9
+          stepCounter: 5fbad408-602d-4e6a-801d-f76b881d976f
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: ORDER_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 16d19384-ebe4-4834-a0c5-3b070f3a4381
+                stepCounter: 7d827168-2dd2-47f1-929f-5a2c9e349bff
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7f8a90a7-62fe-424a-a66b-4aee2e7347b8
+          stepCounter: 5fbad408-602d-4e6a-801d-f76b881d976f
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: STATUS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 9e08d634-35a1-409a-883d-a5a9bf04c880
+                stepCounter: 7d827168-2dd2-47f1-929f-5a2c9e349bff
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: a2b8cee3-0f26-48e9-9e1e-40666be40688
+          stepCounter: 5fbad408-602d-4e6a-801d-f76b881d976f
+        config: {}
+        dataType: DATE
+        description: ""
+        name: PAYMENT_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 9ec4eb68-7522-4e32-9c56-5c8a44cfca6c
+                stepCounter: 7d827168-2dd2-47f1-929f-5a2c9e349bff
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          PAYMENTS: 7d827168-2dd2-47f1-929f-5a2c9e349bff
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SRC
+            nodeName: PAYMENTS
+        join:
+          joinCondition: |
+
+
+            FROM {{ ref('SRC', 'PAYMENTS') }} "PAYMENTS"
+              WHERE "PAYMENTS"."PAYMENT_DATE" > 
+              (SELECT COALESCE(MAX("PAYMENT_DATE"), '1900-01-01') 
+                        FROM {{ ref_no_link('TARGET', 'PSTG_PAYMENTS') }} )
+        name: INC_PAYMENTS
+        noLinkRefs:
+          - locationName: TARGET
+            nodeName: PSTG_PAYMENTS
+  name: INC_PAYMENTS
+  overrideSQL: false
+  schema: ""
+  sqlType: sri:::230
+  type: sql
+  version: 1
+type: Node

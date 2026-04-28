@@ -1,0 +1,108 @@
+fileVersion: 1
+id: 6500bb6e-1dba-4b87-9ab3-e7b880581b91
+name: INC_SHIPMENTS
+operation:
+  config:
+    ddqcolumns:
+      items:
+        - {}
+    dqdup: false
+    dqhandle: false
+    dqnull: false
+    incColumn:
+      columnCounter: 864592c8-2694-4a90-a722-d403a578cd60
+      stepCounter: 6500bb6e-1dba-4b87-9ab3-e7b880581b91
+    ndqcolumns:
+      items:
+        - {}
+    persistTableLocation: TARGET
+    persistTableName: PSTG_SHIPMENTS
+    postSQL: ""
+    preSQL: ""
+    refTable: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: TARGET
+  materializationType: view
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 763af2f7-dd65-497c-a3bf-c080bac48bc7
+          stepCounter: 6500bb6e-1dba-4b87-9ab3-e7b880581b91
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: SHIPMENT_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 210d94fc-5606-4403-a783-69f90a5c8b77
+                stepCounter: ead82418-755b-4d91-a6b4-c0686cd33175
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f6805509-2fe9-4d9d-8711-49238944b2a3
+          stepCounter: 6500bb6e-1dba-4b87-9ab3-e7b880581b91
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: ORDER_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: b1b1f0c5-a121-430d-90f1-e7ca0220bdac
+                stepCounter: ead82418-755b-4d91-a6b4-c0686cd33175
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 091367f3-163e-4c52-a369-edfe1b6a9b26
+          stepCounter: 6500bb6e-1dba-4b87-9ab3-e7b880581b91
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: STATUS
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: daa03578-7fa6-4b62-80fe-814459eb13a3
+                stepCounter: ead82418-755b-4d91-a6b4-c0686cd33175
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 864592c8-2694-4a90-a722-d403a578cd60
+          stepCounter: 6500bb6e-1dba-4b87-9ab3-e7b880581b91
+        config: {}
+        dataType: DATE
+        description: ""
+        name: SHIP_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a581c9a0-ebeb-4cae-8f75-229248a8265f
+                stepCounter: ead82418-755b-4d91-a6b4-c0686cd33175
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          SHIPMENTS: ead82418-755b-4d91-a6b4-c0686cd33175
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SRC
+            nodeName: SHIPMENTS
+        join:
+          joinCondition: FROM {{ ref('SRC', 'SHIPMENTS') }} "SHIPMENTS"
+        name: INC_SHIPMENTS
+        noLinkRefs: []
+  name: INC_SHIPMENTS
+  overrideSQL: false
+  schema: ""
+  sqlType: sri:::230
+  type: sql
+  version: 1
+type: Node

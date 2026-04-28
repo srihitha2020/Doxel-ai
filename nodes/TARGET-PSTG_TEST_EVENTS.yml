@@ -1,0 +1,241 @@
+fileVersion: 1
+id: 6957913f-46fd-408a-a560-05c01c1babcd
+name: PSTG_TEST_EVENTS
+operation:
+  config:
+    postSQL: ""
+    preSQL: ""
+    testsEnabled: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: TARGET
+  materializationType: table
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: b2e85f40-1c24-4430-9d84-d0f855816010
+          stepCounter: 6957913f-46fd-408a-a560-05c01c1babcd
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        isSurrogateKey: true
+        name: PSTG_TEST_EVENTS_KEY
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: f3c9234a-302e-407f-a91a-f0f235d418d9
+          stepCounter: 6957913f-46fd-408a-a560-05c01c1babcd
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: EVENT_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ab49ccd3-fc9b-4da2-be29-8ebf6c9e2fcd
+                stepCounter: e318d461-ceb7-4b07-9512-d9d9945eda56
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 6862a2b0-fd14-4390-ba17-fcbd70da4ae5
+          stepCounter: 6957913f-46fd-408a-a560-05c01c1babcd
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: USER_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: fc406212-601d-4358-b16d-949eb92e68d5
+                stepCounter: e318d461-ceb7-4b07-9512-d9d9945eda56
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 94a15d85-f99f-4f42-842e-a652dd998c63
+          stepCounter: 6957913f-46fd-408a-a560-05c01c1babcd
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: EVENT_TYPE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 7fdcd2cf-e040-43dd-9fe6-eb62381d528b
+                stepCounter: e318d461-ceb7-4b07-9512-d9d9945eda56
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 939627e3-061b-479f-a16e-44530c8e1abf
+          stepCounter: 6957913f-46fd-408a-a560-05c01c1babcd
+        config: {}
+        dataType: FLOAT
+        description: ""
+        name: EVENT_VALUE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 1f251ef4-ecea-43ee-864e-1ac78f292d47
+                stepCounter: e318d461-ceb7-4b07-9512-d9d9945eda56
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 4518e6fe-5a54-49fd-bed0-c3e887a60d6d
+          stepCounter: 6957913f-46fd-408a-a560-05c01c1babcd
+        config: {}
+        dataType: TIMESTAMP_NTZ(9)
+        description: ""
+        name: EVENT_TIME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 13578593-d223-45e8-add9-89b733f5993f
+                stepCounter: e318d461-ceb7-4b07-9512-d9d9945eda56
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 9ba1705c-4d92-4b95-a7c9-78572cc53d5e
+          stepCounter: 6957913f-46fd-408a-a560-05c01c1babcd
+        config: {}
+        dataType: TIMESTAMP_NTZ(9)
+        description: ""
+        name: UPDATED_AT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 0e1d821e-d767-4bec-8397-1d55749957d6
+                stepCounter: e318d461-ceb7-4b07-9512-d9d9945eda56
+            transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 38f45b3f-8e60-47ca-bd9d-d65b01d0ea1b
+          stepCounter: 6957913f-46fd-408a-a560-05c01c1babcd
+        config: {}
+        dataType: NUMBER
+        defaultValue: ""
+        description: ""
+        isSystemVersion: true
+        name: SYSTEM_VERSION
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: fce4da6f-d932-4087-a61d-abbc249320e4
+          stepCounter: 6957913f-46fd-408a-a560-05c01c1babcd
+        config: {}
+        dataType: VARCHAR
+        defaultValue: ""
+        description: ""
+        isSystemCurrentFlag: true
+        name: SYSTEM_CURRENT_FLAG
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: ""
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: c38a37e7-5feb-4013-b4e5-7c3322467abe
+          stepCounter: 6957913f-46fd-408a-a560-05c01c1babcd
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: ""
+        isSystemStartDate: true
+        name: SYSTEM_START_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 89d73f80-2d97-42c8-9e1b-5b838b5a75c0
+          stepCounter: 6957913f-46fd-408a-a560-05c01c1babcd
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: ""
+        isSystemEndDate: true
+        name: SYSTEM_END_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: CAST('2999-12-31 00:00:00' AS TIMESTAMP)
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 565ef1a5-4a3a-48c7-a860-c3be62d3e400
+          stepCounter: 6957913f-46fd-408a-a560-05c01c1babcd
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: ""
+        isSystemCreateDate: true
+        name: SYSTEM_CREATE_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+      - acceptedValues:
+          strictMatch: true
+          values: []
+        appliedColumnTests: {}
+        columnReference:
+          columnCounter: 8b9381bb-42eb-454e-8bfe-4c22efdf9bae
+          stepCounter: 6957913f-46fd-408a-a560-05c01c1babcd
+        config: {}
+        dataType: TIMESTAMP
+        defaultValue: ""
+        description: ""
+        isSystemUpdateDate: true
+        name: SYSTEM_UPDATE_DATE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences: []
+            transform: CAST(CURRENT_TIMESTAMP AS TIMESTAMP)
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          INC_TEST_EVENTS: e318d461-ceb7-4b07-9512-d9d9945eda56
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: TARGET
+            nodeName: INC_TEST_EVENTS
+        join:
+          joinCondition: FROM {{ ref('TARGET', 'INC_TEST_EVENTS') }} "INC_TEST_EVENTS"
+        name: PSTG_TEST_EVENTS
+        noLinkRefs: []
+  name: PSTG_TEST_EVENTS
+  overrideSQL: false
+  schema: ""
+  sqlType: persistentStage
+  type: sql
+  version: 1
+type: Node

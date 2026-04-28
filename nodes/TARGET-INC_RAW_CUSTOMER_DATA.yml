@@ -9,15 +9,17 @@ operation:
     dqdup: false
     dqhandle: false
     dqnull: false
-    incColumn: ""
+    incColumn:
+      columnCounter: 25376ab9-b057-4b60-ba1e-3ede26049c53
+      stepCounter: ee17baab-becd-46d6-b9ae-abdb6c2d3916
     ndqcolumns:
       items:
         - {}
-    persistTableLocation: "ex: TARGET"
-    persistTableName: "ex: DIM_ORDERS"
+    persistTableLocation: TARGET
+    persistTableName: PSTG_RAW_CUSTOMER_DATA
     postSQL: ""
     preSQL: ""
-    refTable: false
+    refTable: true
   database: ""
   deployEnabled: true
   description: ""

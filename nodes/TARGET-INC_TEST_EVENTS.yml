@@ -1,0 +1,142 @@
+fileVersion: 1
+id: e318d461-ceb7-4b07-9512-d9d9945eda56
+name: INC_TEST_EVENTS
+operation:
+  config:
+    ddqcolumns:
+      items:
+        - {}
+    dqdup: false
+    dqhandle: false
+    dqnull: false
+    incColumn:
+      columnCounter: 0e1d821e-d767-4bec-8397-1d55749957d6
+      stepCounter: e318d461-ceb7-4b07-9512-d9d9945eda56
+    ndqcolumns:
+      items:
+        - {}
+    persistTableLocation: TARGET
+    persistTableName: PSTG_TEST_EVENTS
+    postSQL: ""
+    preSQL: ""
+    refTable: true
+  database: ""
+  deployEnabled: true
+  description: ""
+  isMultisource: false
+  locationName: TARGET
+  materializationType: view
+  metadata:
+    appliedNodeTests: []
+    columns:
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: ab49ccd3-fc9b-4da2-be29-8ebf6c9e2fcd
+          stepCounter: e318d461-ceb7-4b07-9512-d9d9945eda56
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: EVENT_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ee2ffd0e-90c5-4c57-b0ac-b1f3e61b6419
+                stepCounter: 75b0f56a-a0f5-429c-8a28-16f19ad815b1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: fc406212-601d-4358-b16d-949eb92e68d5
+          stepCounter: e318d461-ceb7-4b07-9512-d9d9945eda56
+        config: {}
+        dataType: NUMBER(38,0)
+        description: ""
+        name: USER_ID
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 5b08f40b-ed83-4ed6-813d-2535c0bad332
+                stepCounter: 75b0f56a-a0f5-429c-8a28-16f19ad815b1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 7fdcd2cf-e040-43dd-9fe6-eb62381d528b
+          stepCounter: e318d461-ceb7-4b07-9512-d9d9945eda56
+        config: {}
+        dataType: VARCHAR(16777216)
+        description: ""
+        name: EVENT_TYPE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: ce87d33a-de1e-44f2-8809-63f5483431a0
+                stepCounter: 75b0f56a-a0f5-429c-8a28-16f19ad815b1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 1f251ef4-ecea-43ee-864e-1ac78f292d47
+          stepCounter: e318d461-ceb7-4b07-9512-d9d9945eda56
+        config: {}
+        dataType: FLOAT
+        description: ""
+        name: EVENT_VALUE
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: a1dad9ed-177a-48f1-aabf-b21f8c90e809
+                stepCounter: 75b0f56a-a0f5-429c-8a28-16f19ad815b1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 13578593-d223-45e8-add9-89b733f5993f
+          stepCounter: e318d461-ceb7-4b07-9512-d9d9945eda56
+        config: {}
+        dataType: TIMESTAMP_NTZ(9)
+        description: ""
+        name: EVENT_TIME
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: 0da1338c-4b6e-4771-94cd-136058364c2d
+                stepCounter: 75b0f56a-a0f5-429c-8a28-16f19ad815b1
+            transform: ""
+      - appliedColumnTests: {}
+        columnReference:
+          columnCounter: 0e1d821e-d767-4bec-8397-1d55749957d6
+          stepCounter: e318d461-ceb7-4b07-9512-d9d9945eda56
+        config: {}
+        dataType: TIMESTAMP_NTZ(9)
+        description: ""
+        name: UPDATED_AT
+        nullable: true
+        sourceColumnReferences:
+          - columnReferences:
+              - columnCounter: b407ee9d-a767-4990-bbb0-c8ca68a6c745
+                stepCounter: 75b0f56a-a0f5-429c-8a28-16f19ad815b1
+            transform: ""
+    cteString: ""
+    enabledColumnTestIDs: []
+    sourceMapping:
+      - aliases:
+          TEST_EVENTS: 75b0f56a-a0f5-429c-8a28-16f19ad815b1
+        customSQL:
+          customSQL: ""
+        dependencies:
+          - locationName: SRC
+            nodeName: TEST_EVENTS
+        join:
+          joinCondition: |
+            FROM {{ ref('SRC', 'TEST_EVENTS') }} "TEST_EVENTS"
+              WHERE "TEST_EVENTS"."UPDATED_AT" > 
+              (SELECT COALESCE(MAX("UPDATED_AT"), '1900-01-01') 
+                        FROM {{ ref_no_link('TARGET', 'PSTG_TEST_EVENTS') }} )
+        name: INC_TEST_EVENTS
+        noLinkRefs:
+          - locationName: TARGET
+            nodeName: PSTG_TEST_EVENTS
+  name: INC_TEST_EVENTS
+  overrideSQL: false
+  schema: ""
+  sqlType: sri:::230
+  type: sql
+  version: 1
+type: Node
