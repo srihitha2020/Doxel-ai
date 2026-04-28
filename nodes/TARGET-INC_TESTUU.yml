@@ -1,5 +1,5 @@
 fileVersion: 1
-id: 2658a869-06e0-428d-91d7-5a26efce5201
+id: 7f55953d-91f8-403e-90c9-dcab7d3e83dd
 name: INC_TESTUU
 operation:
   config:
@@ -10,8 +10,8 @@ operation:
     dqhandle: false
     dqnull: false
     incColumn:
-      columnCounter: 89c470a3-0889-48c6-a110-06b7884e0cd4
-      stepCounter: 2658a869-06e0-428d-91d7-5a26efce5201
+      columnCounter: bd4a1bd1-5ada-419c-a16b-37ffec22858e
+      stepCounter: 7f55953d-91f8-403e-90c9-dcab7d3e83dd
     ndqcolumns:
       items:
         - {}
@@ -31,8 +31,8 @@ operation:
     columns:
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 0a48e1ab-31b6-48e6-bc15-8d44a7a5c3a2
-          stepCounter: 2658a869-06e0-428d-91d7-5a26efce5201
+          columnCounter: 392909df-524b-43f8-834d-229cf978e506
+          stepCounter: 7f55953d-91f8-403e-90c9-dcab7d3e83dd
         config: {}
         dataType: VARCHAR(16777216)
         description: ""
@@ -45,8 +45,8 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 6b5df307-fe2f-4911-ae24-7e7bd84ead1f
-          stepCounter: 2658a869-06e0-428d-91d7-5a26efce5201
+          columnCounter: 37f30ff8-9308-4a4c-9cf7-cbc352a590f0
+          stepCounter: 7f55953d-91f8-403e-90c9-dcab7d3e83dd
         config: {}
         dataType: NUMBER(38,0)
         description: ""
@@ -59,8 +59,8 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: f3e31280-305f-4067-8245-dd176d4dd814
-          stepCounter: 2658a869-06e0-428d-91d7-5a26efce5201
+          columnCounter: be592459-e93c-42c2-9f9e-8f6d72ad989a
+          stepCounter: 7f55953d-91f8-403e-90c9-dcab7d3e83dd
         config: {}
         dataType: VARCHAR(16777216)
         description: ""
@@ -73,8 +73,8 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 14280e69-47ad-439c-a9bf-6e2509440fab
-          stepCounter: 2658a869-06e0-428d-91d7-5a26efce5201
+          columnCounter: 1fea4b5d-a6e9-4801-a0b5-302d16ff54a5
+          stepCounter: 7f55953d-91f8-403e-90c9-dcab7d3e83dd
         config: {}
         dataType: FLOAT
         description: ""
@@ -87,8 +87,8 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: d0ec4c42-e766-4cc5-8f2d-f23765e6154c
-          stepCounter: 2658a869-06e0-428d-91d7-5a26efce5201
+          columnCounter: ece3ea69-9af1-4541-adc9-c6ade1078c69
+          stepCounter: 7f55953d-91f8-403e-90c9-dcab7d3e83dd
         config: {}
         dataType: TIMESTAMP_NTZ(9)
         description: ""
@@ -101,8 +101,8 @@ operation:
             transform: ""
       - appliedColumnTests: {}
         columnReference:
-          columnCounter: 89c470a3-0889-48c6-a110-06b7884e0cd4
-          stepCounter: 2658a869-06e0-428d-91d7-5a26efce5201
+          columnCounter: bd4a1bd1-5ada-419c-a16b-37ffec22858e
+          stepCounter: 7f55953d-91f8-403e-90c9-dcab7d3e83dd
         config: {}
         dataType: TIMESTAMP_NTZ(9)
         description: ""
@@ -125,7 +125,6 @@ operation:
             nodeName: TESTUU
         join:
           joinCondition: |
-
 
             FROM {{ ref('SRC', 'TESTUU') }} "TESTUU"
               WHERE "TESTUU"."UPDATED_AT" > 
