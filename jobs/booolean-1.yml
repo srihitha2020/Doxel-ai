@@ -1,6 +1,6 @@
 excludeSelector: ""
 fileVersion: 1
 id: "1"
-includeSelector: "P OR { location: \"TARGET\" name: \"PSTG_TESTUU\" }"
+includeSelector: "{ location: \"TARGET\" name: \"NITHYA\" }"
 name: booolean
 type: Job
